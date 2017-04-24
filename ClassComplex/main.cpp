@@ -21,8 +21,10 @@ int main(int argc, const char * argv[]) {
     
     cout << fraction.module() << endl;
     
-    fraction-3;
+    fraction-4;
     fraction.print();
+    
+        cout << fraction.module() << endl;
     
     fraction-fraction1;
     fraction.print();
@@ -33,6 +35,6 @@ int main(int argc, const char * argv[]) {
     double test = (double)fraction;
     cout << test << endl;
     
-    getchar();
+  //  getchar();
     return 0;
 }
