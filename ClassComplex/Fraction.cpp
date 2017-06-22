@@ -22,7 +22,7 @@ void Fraction:: setFraction(){
 
 
 Fraction:: Fraction(const Fraction & obj){
-    
+    cout << "Начало работы конструктора копирования" << endl;
     numerator = obj.numerator;
     denominator = obj.denominator;
     
@@ -39,6 +39,7 @@ void Fraction:: check(){
 
 double Fraction:: module(){
     check();
+    cout << "Вычисление метода" << endl;
     if (denominator != 0)
         return fabs( (double)numerator / (double)denominator);
     else return 0;
@@ -52,6 +53,7 @@ void Fraction:: print(){
 
 
 void Fraction:: operator -(int temp) {
+    cout << "Перегрузка оператора - для целого числа" << endl;
     check();
     numerator=numerator  - temp * denominator;
 }
@@ -59,6 +61,7 @@ void Fraction:: operator -(int temp) {
 
 void Fraction:: operator -(Fraction temp){
     check();
+    cout << "Перегрузка оператора - для рационального числа" << endl;
     if (denominator == temp.denominator)
         numerator = numerator - temp.numerator;
     else{
@@ -71,11 +74,13 @@ void Fraction:: operator -(Fraction temp){
 
 Fraction:: operator  double(){
     check();
+    cout << "Перегрузка оператора приведения типа" << endl;
     return (double)numerator/(double)denominator;
 }
 
 void Fraction:: operator !(){
     check();
+    cout << "Перегрузка оператора !" << endl;
     if (numerator < 0) {
         int temp = -numerator;
         numerator = -denominator;
